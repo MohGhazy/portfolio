@@ -1,306 +1,381 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link href="./dist/output.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="./dist/image/favicon.io/favicon.ico" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./dist/image/favicon.io/favicon.ico" />
 
-<title>Portofolio</title>
-</head>
+    <title>Portofolio</title>
+  </head>
 
-<body class="overflow-x-hidden bg-[#05070d] text-slate-200">
+  <body class="overflow-x-hidden bg-[#05070d] text-slate-200">
+    <!-- NAVBAR -->
+    <header
+      id="navbar"
+      class="top-0 left-0 w-full absolute z-50 bg-[#05070d]/80 backdrop-blur border-b border-white/10 transition"
+    >
+      <div class="w-full px-5 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+          <a
+            href="#home"
+            class="font-bold text-lg sm:text-xl text-primary py-5 tracking-widest"
+          >
+            Ghazy
+          </a>
 
-<!-- NAVBAR -->
-  <header id="navbar"
-  class="top-0 left-0 w-full absolute z-50 bg-[#05070d]/80 backdrop-blur border-b border-white/10 transition">
+          <nav class="hidden lg:flex gap-10 text-sm lg:text-base">
+            <a href="#home" class="hover:text-primary transition">Beranda</a>
+            <a href="./tentang-saya.html" class="hover:text-primary transition"
+              >Profil</a
+            >
+            <a href="./projects.html" class="hover:text-primary transition"
+              >Projects</a
+            >
+          </nav>
 
-    <div class="w-full px-5 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between">
-
-        <a href="#home" class="font-bold text-lg sm:text-xl text-primary py-5 tracking-widest">
-        Ghazy
-        </a>
-
-        <nav class="hidden lg:flex gap-10 text-sm lg:text-base">
-          <a href="#home" class="hover:text-primary transition">Beranda</a>
-          <a href="./tentang-saya.html" class="hover:text-primary transition">Profil</a>
-          <a href="./projects.html" class="hover:text-primary transition">Projects</a>
-        </nav>
-
-        <button id="burgerBtn" class="lg:hidden relative w-8 h-8 flex items-center justify-center">
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
-        </button>
-
+          <button
+            id="burgerBtn"
+            class="lg:hidden relative w-8 h-8 flex items-center justify-center"
+          >
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </button>
+        </div>
       </div>
-    </div>
 
-    <div id="mobileMenu"
-    class="lg:hidden absolute top-full left-0 w-full
-    bg-[#05070d] border-b border-white/10
-    overflow-hidden max-h-0 transition-all duration-300">
-
-      <div class="flex flex-col px-6 py-4 gap-4 text-sm">
-        <a href="#home" class="mobile-link">Beranda</a>
-        <a href="#about" class="mobile-link">Tentang</a>
-        <a href="#portofolio" class="mobile-link">Portofolio</a>
+      <div
+        id="mobileMenu"
+        class="lg:hidden absolute top-full left-0 w-full bg-[#05070d] border-b border-white/10 overflow-hidden max-h-0 transition-all duration-300"
+      >
+        <div class="flex flex-col px-6 py-4 gap-4 text-sm">
+          <a href="#home" class="mobile-link">Beranda</a>
+          <a href="#about" class="mobile-link">Tentang</a>
+          <a href="#portofolio" class="mobile-link">Portofolio</a>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- HERO -->
-  <section id="home" class="reveal no-out pt-28 md:pt-36 lg:pt-40 pb-16 md:pb-28 lg:pb-36 relative">
+    <!-- HERO -->
+    <section
+      id="home"
+      class="reveal no-out pt-28 md:pt-36 lg:pt-40 pb-16 md:pb-28 lg:pb-36 relative"
+    >
+      <div class="container mx-auto px-5 sm:px-6 lg:px-8">
+        <div class="flex flex-col-reverse lg:flex-row items-center gap-10">
+          <div
+            class="w-full lg:w-1/2 text-center lg:text-left"
+            data-aos="fade-right"
+          >
+            <!-- NAMA (STATIC) -->
+            <h1
+              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight"
+            >
+              Moh. Ghazy
+            </h1>
 
-    <div class="container mx-auto px-5 sm:px-6 lg:px-8">
-      <div class="flex flex-col-reverse lg:flex-row items-center gap-10">
+            <p
+              class="mt-3 text-xs sm:text-sm uppercase tracking-[0.25em] text-primary/70"
+            >
+              I Am A
+            </p>
 
-        <div class="w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-right">
+            <!-- ROLE (ANIMATED) -->
+            <h2
+              class="mt-2 text-lg sm:text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#a3d5e0] via-[#7dd3fc] to-[#c084fc] font-semibold"
+            >
+              <span id="typed-name"></span>
+            </h2>
 
-          <!-- NAMA (STATIC) -->
-          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl
-          font-bold text-white tracking-tight">
-            Moh. Ghazy
-          </h1>
+            <!-- VALUE STATEMENT -->
+            <p
+              class="mt-4 sm:mt-5 text-sm sm:text-base md:text-lg text-slate-400 max-w-xl mx-auto lg:mx-0 leading-relaxed"
+            >
+              Keep scrolling to see how I turn ideas into digital experiences
+            </p>
+          </div>
 
-          <p class="mt-3 text-xs sm:text-sm uppercase tracking-[0.25em] text-primary/70">
-            I Am A
-          </p>
+          <div class="w-full lg:w-1/2 flex justify-center reveal-child delay-1">
+            <img
+              src="./dist/image/ghazy.png"
+              class="w-44 sm:w-52 md:w-60 lg:w-72 rounded-2xl shadow-xl hero-float"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- ROLE (ANIMATED) -->
-          <h2 class="mt-2 text-lg sm:text-xl md:text-2xl
-          text-transparent bg-clip-text
-          bg-gradient-to-r from-[#a3d5e0] via-[#7dd3fc] to-[#c084fc]
-          font-semibold">
+    <!-- ABOUT -->
+    <section id="about" class="reveal py-20 md:py-28 lg:py-36 bg-[#06090f]">
+      <div class="container mx-auto px-5 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div class="reveal-child">
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 text-white"
+            >
+              Tentang Saya
+            </h2>
 
-            <span id="typed-name"></span>
+            <p class="text-sm sm:text-base text-slate-400 leading-relaxed">
+              Saya adalah web developer yang fokus pada pembuatan tampilan
+              modern, responsif, dan scalable menggunakan teknologi web terbaru.
+            </p>
 
+            <div class="mt-7 sm:mt-8 flex justify-start">
+              <a href="./tentang-saya.html" class="about-cta">
+                Lihat profil lengkap saya
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="reveal-child delay-1">
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 text-white"
+            >
+              Tech Stack
+            </h2>
+
+            <div class="flex flex-wrap gap-4">
+              <div class="tech-chip">
+                <img src="./dist/image/icons/html5.svg" />
+              </div>
+              <div class="tech-chip">
+                <img src="./dist/image/icons/css.svg" />
+              </div>
+              <div class="tech-chip">
+                <img src="./dist/image/icons/js.svg" />
+              </div>
+              <div class="tech-chip">
+                <img src="./dist/image/icons/tailwind-css.svg" />
+              </div>
+              <div class="tech-chip">
+                <img src="./dist/image/icons/django.png" />
+              </div>
+              <div class="tech-chip">
+                <img src="./dist/image/icons/postgresql.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portofolio" class="py-20 md:py-28 lg:py-36">
+      <div class="container mx-auto px-5 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+            Project Terbaru
           </h2>
-
-          <!-- VALUE STATEMENT -->
-          <p class="mt-4 sm:mt-5
-          text-sm sm:text-base md:text-lg
-          text-slate-400 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-            Keep scrolling to see how I turn ideas into digital experiences
-          </p>
         </div>
 
-        <div class="w-full lg:w-1/2 flex justify-center reveal-child delay-1">
-          <img src="./dist/image/ghazy.png"
-          class="w-44 sm:w-52 md:w-60 lg:w-72 rounded-2xl shadow-xl hero-float">
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="reveal py-20 md:py-28 lg:py-36 bg-[#06090f]">
-    <div class="container mx-auto px-5 sm:px-6 lg:px-8">
-
-      <div class="grid lg:grid-cols-2 gap-12">
-
-      <div class="reveal-child">
-        
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 text-white">
-        Tentang Saya
-        </h2>
-        
-        <p class="text-sm sm:text-base text-slate-400 leading-relaxed">
-        Saya adalah web developer yang fokus pada pembuatan tampilan modern,
-        responsif, dan scalable menggunakan teknologi web terbaru.
-        </p>
-        
-        <div class="mt-7 sm:mt-8 flex justify-start">
-          <a href="./tentang-saya.html"
-            class="about-cta">
-            Lihat profil lengkap saya
-            <span class="arrow">→</span>
-          </a>
-        </div>
-
-      </div>
-
-      <div class="reveal-child delay-1">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 text-white">
-        Tech Stack
-        </h2>
-
-        <div class="flex flex-wrap gap-4">
-          <div class="tech-chip"><img src="./dist/image/icons/html5.svg"></div>
-          <div class="tech-chip"><img src="./dist/image/icons/css.svg"></div>
-          <div class="tech-chip"><img src="./dist/image/icons/js.svg"></div>
-          <div class="tech-chip"><img src="./dist/image/icons/tailwind-css.svg"></div>
-          <div class="tech-chip"><img src="./dist/image/icons/django.png"></div>
-          <div class="tech-chip"><img src="./dist/image/icons/postgresql.png"></div>
-        </div>
-
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO -->
-  <section id="portofolio" class="py-20 md:py-28 lg:py-36">
-    <div class="container mx-auto px-5 sm:px-6 lg:px-8">
-
-      <div class="text-center mb-16 reveal">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-        Project Terbaru
-        </h2>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        <!-- CARD 1 -->
-        <div class="portfolio-card reveal delay-1">
-          <div class="relative overflow-hidden">
-            <img src="./dist/image/portfolio/blog-frecationer.png" class="w-full">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent transition duration-500 portfolio-overlay"></div>
-          </div>
-
-          <div class="p-6">
-            <h3 class="text-lg md:text-xl font-semibold text-white">
-            Blog Frecationer
-            </h3>
-
-            <p class="text-sm text-slate-400 mt-2">
-            Tampilan blog responsif menggunakan Tailwind dengan layout bersih,
-            reusable component, dan struktur scalable.
-            </p>
-
-            <div class="flex flex-wrap gap-2 mt-4">
-              <span class="tech-badge">HTML</span>
-              <span class="tech-badge">Tailwind</span>
-              <span class="tech-badge">Responsive</span>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- CARD 1 -->
+          <div class="portfolio-card reveal delay-1">
+            <div class="relative overflow-hidden">
+              <img
+                src="./dist/image/portfolio/blog-frecationer.png"
+                class="w-full"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent transition duration-500 portfolio-overlay"
+              ></div>
             </div>
 
-            <a href="./projects/blog-frecationer.html"
-            class="mt-6 inline-block w-full text-center py-2.5 rounded-lg
-            bg-white/5 border border-white/10 text-sm text-primary hover:bg-white/10 transition">
-            Lihat detail proyek
-            </a>
+            <div class="p-6">
+              <h3 class="text-lg md:text-xl font-semibold text-white">
+                Blog Frecationer
+              </h3>
+
+              <p class="text-sm text-slate-400 mt-2">
+                Tampilan blog responsif menggunakan Tailwind dengan layout
+                bersih, reusable component, dan struktur scalable.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">Tailwind</span>
+                <span class="tech-badge">Responsive</span>
+              </div>
+
+              <a
+                href="./projects/blog-frecationer.html"
+                class="mt-6 inline-block w-full text-center py-2.5 rounded-lg bg-white/5 border border-white/10 text-sm text-primary hover:bg-white/10 transition"
+              >
+                Lihat detail proyek
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- CARD 2 -->
-        <div class="portfolio-card reveal delay-2">
-          <div class="relative overflow-hidden">
-            <img src="./dist/image/portfolio/spend-guard.png" class="w-full">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent transition duration-500 portfolio-overlay"></div>
-          </div>
-
-          <div class="p-6">
-            <h3 class="text-lg md:text-xl font-semibold text-white">
-            SpendGuard – Finance Tracker
-            </h3>
-
-            <p class="text-sm text-slate-400 mt-2">
-            Aplikasi pengelola keuangan berbasis Django dan Tailwind dengan
-            dashboard modern serta grafik interaktif.
-            </p>
-
-            <div class="flex flex-wrap gap-2 mt-4">
-              <span class="tech-badge">Django</span>
-              <span class="tech-badge">Tailwind</span>
-              <span class="tech-badge">Chart.js</span>
-              <span class="tech-badge">PostgreSQL</span>
+          <!-- CARD 2 -->
+          <div class="portfolio-card reveal delay-2">
+            <div class="relative overflow-hidden">
+              <img
+                src="./dist/image/portfolio/spend-guard.png"
+                class="w-full"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent transition duration-500 portfolio-overlay"
+              ></div>
             </div>
 
-            <a href="./projects/spendguard.html"
-            class="mt-6 inline-block w-full text-center py-2.5 rounded-lg
-            bg-white/5 border border-white/10 text-sm text-primary hover:bg-white/10 transition">
-            Lihat detail proyek
-            </a>
+            <div class="p-6">
+              <h3 class="text-lg md:text-xl font-semibold text-white">
+                SpendGuard – Finance Tracker
+              </h3>
+
+              <p class="text-sm text-slate-400 mt-2">
+                Aplikasi pengelola keuangan berbasis Django dan Tailwind dengan
+                dashboard modern serta grafik interaktif.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="tech-badge">Django</span>
+                <span class="tech-badge">Tailwind</span>
+                <span class="tech-badge">Chart.js</span>
+                <span class="tech-badge">PostgreSQL</span>
+              </div>
+
+              <a
+                href="./projects/spendguard.html"
+                class="mt-6 inline-block w-full text-center py-2.5 rounded-lg bg-white/5 border border-white/10 text-sm text-primary hover:bg-white/10 transition"
+              >
+                Lihat detail proyek
+              </a>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="portfolio-card reveal delay-3">
+            <div class="relative overflow-hidden">
+              <img
+                src="./dist/image/portfolio/daily-track.png"
+                class="w-full"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent transition duration-500 portfolio-overlay"
+              ></div>
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-lg md:text-xl font-semibold text-white">
+                Daily Track – Habit Tracker
+              </h3>
+
+              <p class="text-sm text-slate-400 mt-2">
+                Aplikasi pelacak kebiasaan harian berbasis Django dengan UI
+                modern menggunakan Tailwind, fitur pengingat, dan statistik
+                interaktif.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="tech-badge">Django</span>
+                <span class="tech-badge">Tailwind</span>
+              </div>
+
+              <a
+                href="./projects/daily-track.html"
+                class="mt-6 inline-block w-full text-center py-2.5 rounded-lg bg-white/5 border border-white/10 text-sm text-primary hover:bg-white/10 transition"
+              >
+                Lihat detail proyek
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- CTA ALL PROJECTS -->
-      <div class="projects-cta reveal">
-        <a href="./projects.html" class="projects-btn">
-          <span>Lihat Semua Project</span>
-          <svg class="projects-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <path d="M5 12H19M19 12L13 6M19 12L13 18"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-[#03060b] pt-14 sm:pt-16 pb-10 border-t border-white/10">
-
-    <div class="container mx-auto px-5 sm:px-6 lg:px-8">
-
-      <!-- TITLE -->
-      <div class="text-center mb-10">
-        <h3 class="text-lg sm:text-xl font-semibold mb-2">
-          Hubungi Saya
-        </h3>
-
-        <p class="text-sm text-slate-400 max-w-md mx-auto">
-          Terbuka untuk kolaborasi, freelance, maupun diskusi project.
-        </p>
-      </div>
-
-      <!-- GRID -->
-      <div class="grid gap-10
-                  sm:grid-cols-2
-                  lg:grid-cols-3
-                  text-center">
-
-        <!-- EMAIL -->
-        <div>
-          <p class="text-xs text-slate-500 mb-2 uppercase tracking-wide">
-            Email
-          </p>
-
-          <a href="mailto:mohghazyaa@gmail.com"
-            class="text-sm text-slate-300 hover:text-primary transition break-words">
-            mohghazyaa@gmail.com
+        <!-- CTA ALL PROJECTS -->
+        <div class="projects-cta reveal">
+          <a href="./projects.html" class="projects-btn">
+            <span>Lihat Semua Project</span>
+            <svg
+              class="projects-arrow"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M5 12H19M19 12L13 6M19 12L13 18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </a>
         </div>
+      </div>
+    </section>
 
-        <!-- LOKASI -->
-        <div>
-          <p class="text-xs text-slate-500 mb-2 uppercase tracking-wide">
-            Lokasi
-          </p>
+    <!-- FOOTER -->
+    <footer class="bg-[#03060b] pt-14 sm:pt-16 pb-10 border-t border-white/10">
+      <div class="container mx-auto px-5 sm:px-6 lg:px-8">
+        <!-- TITLE -->
+        <div class="text-center mb-10">
+          <h3 class="text-lg sm:text-xl font-semibold mb-2">Hubungi Saya</h3>
 
-          <p class="text-sm text-slate-300">
-            Sidoarjo, Jawa Timur
+          <p class="text-sm text-slate-400 max-w-md mx-auto">
+            Terbuka untuk kolaborasi, freelance, maupun diskusi project.
           </p>
         </div>
 
-        <!-- SOSIAL MEDIA -->
-        <div class="sm:col-span-2 lg:col-span-1 flex flex-col items-center">
-          <p class="text-xs text-slate-500 mb-3 uppercase tracking-wide">
-            Sosial Media
-          </p>
+        <!-- GRID -->
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 text-center">
+          <!-- EMAIL -->
+          <div>
+            <p class="text-xs text-slate-500 mb-2 uppercase tracking-wide">
+              Email
+            </p>
 
-          <div class="flex justify-center gap-4">
+            <a
+              href="mailto:mohghazyaa@gmail.com"
+              class="text-sm text-slate-300 hover:text-primary transition break-words"
+            >
+              mohghazyaa@gmail.com
+            </a>
+          </div>
 
-            <!-- GitHub -->
-            <a href="https://github.com/MohGhazy"
-              target="_blank"
-              class="inline-flex items-center justify-center
-              w-10 h-10 rounded-lg
-              bg-white/5 border border-white/10
-              hover:bg-white/10 transition">
+          <!-- LOKASI -->
+          <div>
+            <p class="text-xs text-slate-500 mb-2 uppercase tracking-wide">
+              Lokasi
+            </p>
 
+<<<<<<< HEAD
               <img src="dist/image/icons/github.png"
-                  alt="GitHub"
-                  class="w-5 h-5 object-contain invert brightness-110">
-            </a>
+=======
+            <p class="text-sm text-slate-300">Sidoarjo, Jawa Timur</p>
+          </div>
 
+          <!-- SOSIAL MEDIA -->
+          <div class="sm:col-span-2 lg:col-span-1 flex flex-col items-center">
+            <p class="text-xs text-slate-500 mb-3 uppercase tracking-wide">
+              Sosial Media
+            </p>
+
+            <div class="flex justify-center gap-4">
+              <!-- GitHub -->
+              <a
+                href="https://github.com/MohGhazy"
+                target="_blank"
+                class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition"
+              >
+                <img
+                  src="/dist/image/icons/github.png"
+>>>>>>> d23ba59 (add dailytracker)
+                  alt="GitHub"
+                  class="w-5 h-5 object-contain invert brightness-110"
+                />
+              </a>
+
+<<<<<<< HEAD
             <!-- Instagram -->
             <a href="https://instagram.com/mohghazy_"
               target="_blank"
@@ -310,146 +385,156 @@
               hover:bg-white/10 transition">
 
               <img src="dist/image/icons/instagram.png"
+=======
+              <!-- Instagram -->
+              <a
+                href="https://instagram.com/mohghazy_"
+                target="_blank"
+                class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition"
+              >
+                <img
+                  src="/dist/image/icons/instagram.png"
+>>>>>>> d23ba59 (add dailytracker)
                   alt="Instagram"
-                  class="w-5 h-5 object-contain">
-            </a>
-
+                  class="w-5 h-5 object-contain"
+                />
+              </a>
+            </div>
           </div>
         </div>
 
+        <!-- COPYRIGHT -->
+        <div class="text-center mt-12 pt-6 border-t border-white/5">
+          <p class="text-xs text-slate-500">
+            © 2026 Created by Ghazy. All rights reserved.
+          </p>
+        </div>
       </div>
+    </footer>
 
-      <!-- COPYRIGHT -->
-      <div class="text-center mt-12 pt-6 border-t border-white/5">
-        <p class="text-xs text-slate-500">
-          © 2026 Created by Ghazy. All rights reserved.
-        </p>
-      </div>
-
-    </div>
-  </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script>
-/* ===============================
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      /* ===============================
    BURGER MENU
 ================================= */
-const burger = document.getElementById("burgerBtn");
-const menu = document.getElementById("mobileMenu");
+      const burger = document.getElementById("burgerBtn");
+      const menu = document.getElementById("mobileMenu");
 
-burger.addEventListener("click",()=>{
-  menu.classList.toggle("max-h-0");
-  menu.classList.toggle("max-h-96");
-});
+      burger.addEventListener("click", () => {
+        menu.classList.toggle("max-h-0");
+        menu.classList.toggle("max-h-96");
+      });
 
-
-/* ===============================
+      /* ===============================
    TYPED TEXT
 ================================= */
-document.addEventListener("DOMContentLoaded", function(){
-  new Typed("#typed-name", { 
-    strings: ["Frontend Developer", "English Tutor"], 
-    typeSpeed: 60, 
-    backSpeed: 40, 
-    backDelay: 1400, 
-    startDelay: 300, 
-    smartBackspace: true,
-    showCursor: true,
-    cursorChar: "|",
-    loop: true 
-  });
-});
+      document.addEventListener("DOMContentLoaded", function () {
+        new Typed("#typed-name", {
+          strings: ["Frontend Developer", "English Tutor"],
+          typeSpeed: 60,
+          backSpeed: 40,
+          backDelay: 1400,
+          startDelay: 300,
+          smartBackspace: true,
+          showCursor: true,
+          cursorChar: "|",
+          loop: true,
+        });
+      });
 
-
-/* ===============================
+      /* ===============================
    NAVBAR SCROLL EFFECT
 ================================= */
-const nav = document.getElementById("navbar");
+      const nav = document.getElementById("navbar");
 
-window.addEventListener("scroll",()=>{
-  if(window.scrollY>40){
-    nav.classList.add("nav-solid");
-  }else{
-    nav.classList.remove("nav-solid");
-  }
-});
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 40) {
+          nav.classList.add("nav-solid");
+        } else {
+          nav.classList.remove("nav-solid");
+        }
+      });
 
-
-/* ===============================
+      /* ===============================
    GLOBAL REVEAL (SEMUA SECTION)
 ================================= */
 
-const revealEls = document.querySelectorAll(".reveal");
+      const revealEls = document.querySelectorAll(".reveal");
 
-const globalObserver = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
+      const globalObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
 
-      /* child reveal */
-      const children = entry.target.querySelectorAll(".reveal-child");
-      children.forEach((el,i)=>{
-        el.style.transitionDelay = (i * 0.12)+"s";
-        el.classList.add("show");
-      });
+              /* child reveal */
+              const children = entry.target.querySelectorAll(".reveal-child");
+              children.forEach((el, i) => {
+                el.style.transitionDelay = i * 0.12 + "s";
+                el.classList.add("show");
+              });
+            } else {
+              if (!entry.target.classList.contains("no-out")) {
+                entry.target.classList.remove("show");
+                entry.target
+                  .querySelectorAll(".reveal-child")
+                  .forEach((el) => el.classList.remove("show"));
+              }
+            }
+          });
+        },
+        {
+          threshold: 0.15,
+          rootMargin: "0px 0px -10% 0px",
+        },
+      );
 
-    }else{
-      if(!entry.target.classList.contains("no-out")){
-        entry.target.classList.remove("show");
-        entry.target.querySelectorAll(".reveal-child")
-          .forEach(el=>el.classList.remove("show"));
-      }
-    }
-  });
-},{
-  threshold:0.15,
-  rootMargin:"0px 0px -10% 0px"
-});
+      revealEls.forEach((el) => globalObserver.observe(el));
 
-revealEls.forEach(el=>globalObserver.observe(el));
-
-
-/* ===============================
+      /* ===============================
    PORTFOLIO STAGGER FIX
 ================================= */
 
-const cards = document.querySelectorAll(".portfolio-card");
+      const cards = document.querySelectorAll(".portfolio-card");
 
-const cardObserver = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
+      const cardObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              cards.forEach((card, i) => {
+                setTimeout(() => {
+                  card.classList.add("show");
+                }, i * 160);
+              });
 
-      cards.forEach((card,i)=>{
-        setTimeout(()=>{
-          card.classList.add("show");
-        }, i * 160);
+              cardObserver.disconnect(); // biar ga repeat
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+        },
+      );
+
+      /* observe parent grid saja */
+      const portfolioSection = document.querySelector("#portofolio");
+      if (portfolioSection) {
+        cardObserver.observe(portfolioSection);
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            e.preventDefault();
+            const offset = 80;
+            const y =
+              target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+          }
+        });
       });
 
-      cardObserver.disconnect(); // biar ga repeat
-    }
-  });
-},{
-  threshold:0.2
-});
-
-/* observe parent grid saja */
-const portfolioSection = document.querySelector("#portofolio");
-if(portfolioSection){
-  cardObserver.observe(portfolioSection);
-}
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-  anchor.addEventListener("click",function(e){
-    const target=document.querySelector(this.getAttribute("href"));
-    if(target){
-      e.preventDefault();
-      const offset=80;
-      const y=target.getBoundingClientRect().top+window.pageYOffset-offset;
-      window.scrollTo({top:y,behavior:"smooth"});
-    }
-  });
-});
-</script>
-
-</body>
+    </script>
+  </body>
 </html>
